@@ -1,5 +1,7 @@
 package cl.populus.api.entities;
 
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -8,7 +10,7 @@ public class Representante {
 	private long id;
 	private String nombres;
 	private String apellido;
-	private Partido partido;
+	private String partido;
 	//cgajardo: indica si corresponde a un diputado/senador
 	private String cargo;
 	private String area;
@@ -17,6 +19,7 @@ public class Representante {
 	private String twitter;
 	private String facebook;
 	private String docLegislador;
+	private List<String> periodos;
 	
 	
 	public String getNombres() {
@@ -31,10 +34,10 @@ public class Representante {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	public Partido getPartido() {
+	public String getPartido() {
 		return partido;
 	}
-	public void setPartido(Partido partido) {
+	public void setPartido(String partido) {
 		this.partido = partido;
 	}
 	public long getId() {
@@ -78,6 +81,12 @@ public class Representante {
 	}
 	public void setDocLegislador(String docLegislador) {
 		this.docLegislador = docLegislador;
+	}
+	public List<String> getPeriodos() {
+		return periodos;
+	}
+	public void setPeriodos(List<String> periodos) {
+		this.periodos = periodos;
 	}
 	
 	 

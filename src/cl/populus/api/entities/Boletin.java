@@ -8,10 +8,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Boletin {
 	
-	private long id;
 	private String numero;
 	private String titulo;
-	private Date fechaIngreso;
 	private String origen;
 	private List<Representante> autores;
 	private String urgencia;
@@ -19,12 +17,9 @@ public class Boletin {
 	private String leyNro;
 	//cgajardo: TODO definir tipo de refundidos
 	private List<Long> refundidos;
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
+	private String leyModificada;	
+	private Date fechaIngreso;
+	
 	public String getNumero() {
 		return numero;
 	}
@@ -78,6 +73,12 @@ public class Boletin {
 	}
 	public void setRefundidos(List<Long> refundidos) {
 		this.refundidos = refundidos;
+	}
+	public String getLeyModificada() {
+		return leyModificada;
+	}
+	public void setLeyModificada(String leyModificada) {
+		this.leyModificada = leyModificada;
 	}
 	
 

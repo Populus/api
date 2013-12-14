@@ -1,5 +1,6 @@
 package cl.populus.api.entities;
 
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement

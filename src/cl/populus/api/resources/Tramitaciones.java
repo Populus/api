@@ -10,11 +10,21 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import cl.populus.api.dao.RepresentanteDao;
+import cl.populus.api.entities.Representante;
 import cl.populus.api.entities.Tramitacion;
 
 @Path("/tramitaciones")
 @Produces(MediaType.APPLICATION_JSON)
 public class Tramitaciones {
+	
+	@GET
+	@Path("/test")
+	public Response test(){
+		RepresentanteDao datos = new RepresentanteDao();
+		Representante r = datos.getRepresentanteById(0);
+		return Response.status(200).entity(r).build();
+	}
 	
 	@GET
 	@Path("/{id}")
