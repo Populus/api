@@ -14,6 +14,17 @@ public class Tramitacion {
 	private String etapa;
 	private String subetapa;
 	
+	//cgajardo: constructor default
+	public Tramitacion(){
+	}
+	//cgajardo: constructor minimo
+	public Tramitacion(long id, String sesion, String boletin){
+		this.id = id;
+		this.sesion =sesion;
+		this.boletin = boletin;
+	}
+
+	
 	public long getId() {
 		return id;
 	}
