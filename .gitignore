@@ -5,3 +5,5 @@
 *.war
 *.ear
 *.DS_Store
+# Este archivo contiene claves de conexion #
+WebContent/META-INF/context.xml

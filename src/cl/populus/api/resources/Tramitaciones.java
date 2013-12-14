@@ -23,7 +23,6 @@ public class Tramitaciones {
 		Tramitacion t = new Tramitacion();
 		t.setId(123);
 		t.setEtapa("Etapa 1");
-		t.setSubetapa("Etapa 2");
 		return Response.status(200).entity(t).build();
 	}
 	

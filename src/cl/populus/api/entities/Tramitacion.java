@@ -8,11 +8,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Tramitacion {
 	
 	private long id;
+	private String nroBoletin;
 	private String sesion;
 	private Date fecha;
-	private String boletin;
 	private String etapa;
-	private String subetapa;
+	private Votacion votacion;
+	private String docComparado;
+	private String docInforme;
+	private String docDiscusion;
+	
 	
 	//cgajardo: constructor default
 	public Tramitacion(){
@@ -21,7 +25,15 @@ public class Tramitacion {
 	public Tramitacion(long id, String sesion, String boletin){
 		this.id = id;
 		this.sesion =sesion;
-		this.boletin = boletin;
+		this.nroBoletin = boletin;
+	}
+	//cgajardo: constructor completo
+	public Tramitacion(long id, String sesion, Date fecha, String boletin, String etapa){
+		this.id = id;
+		this.sesion = sesion;
+		this.fecha = fecha;
+		this.nroBoletin = boletin;
+		this.etapa = etapa;
 	}
 
 	
@@ -44,10 +56,10 @@ public class Tramitacion {
 		this.fecha = fecha;
 	}
 	public String getBoletin() {
-		return boletin;
+		return nroBoletin;
 	}
 	public void setBoletin(String boletin) {
-		this.boletin = boletin;
+		this.nroBoletin = boletin;
 	}
 	public String getEtapa() {
 		return etapa;
@@ -55,12 +67,35 @@ public class Tramitacion {
 	public void setEtapa(String etapa) {
 		this.etapa = etapa;
 	}
-	public String getSubetapa() {
-		return subetapa;
+	public String getNroBoletin() {
+		return nroBoletin;
 	}
-	public void setSubetapa(String subetapa) {
-		this.subetapa = subetapa;
+	public void setNroBoletin(String nroBoletin) {
+		this.nroBoletin = nroBoletin;
 	}
-	
+	public Votacion getVotacion() {
+		return votacion;
+	}
+	public void setVotacion(Votacion votacion) {
+		this.votacion = votacion;
+	}
+	public String getDocComparado() {
+		return docComparado;
+	}
+	public void setDocComparado(String docComparado) {
+		this.docComparado = docComparado;
+	}
+	public String getDocInforme() {
+		return docInforme;
+	}
+	public void setDocInforme(String docInforme) {
+		this.docInforme = docInforme;
+	}
+	public String getDocDiscusion() {
+		return docDiscusion;
+	}
+	public void setDocDiscusion(String docDiscusion) {
+		this.docDiscusion = docDiscusion;
+	}
 
 }

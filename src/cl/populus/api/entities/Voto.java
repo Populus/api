@@ -5,13 +5,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Voto {
 	
-	private Politico politico;
+	private Representante politico;
 	private String valor;
 	
-	public Politico getPolitico() {
+	public Representante getPolitico() {
 		return politico;
 	}
-	public void setPolitico(Politico politico) {
+	public void setPolitico(Representante politico) {
 		this.politico = politico;
 	}
 	public String getValor() {
