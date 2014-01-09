@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Votacion {
 	
+	private long id;
 	private Tramitacion tramitacion;
 	private List<Voto> votos;
 	private String tema;
@@ -29,5 +30,11 @@ public class Votacion {
 	}
 	public void setTema(String tema) {
 		this.tema = tema;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
 	}
 }

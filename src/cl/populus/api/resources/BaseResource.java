@@ -1,7 +1,9 @@
 package cl.populus.api.resources;
 
 import cl.populus.api.dao.BoletinDao;
+import cl.populus.api.dao.EstadisticaDao;
 import cl.populus.api.dao.RepresentanteDao;
+import cl.populus.api.dao.VotacionDao;
 
 /*
  * cgajardo: Factory para los dao 
@@ -28,6 +30,26 @@ public class BaseResource {
 		
 		boletinDao = new BoletinDao();
 		return boletinDao;
+	}
+	
+	/* VOTACION DAO */
+	private VotacionDao votacionDao;
+	protected VotacionDao getVotacionDao(){
+		
+		if(votacionDao != null) return votacionDao;
+		
+		votacionDao = new VotacionDao();
+		return votacionDao;
+	}
+	
+	/* ESTADISTICA DAO */
+	private EstadisticaDao estadisticaDao;
+	protected EstadisticaDao getEstadisticaDao(){
+		
+		if(estadisticaDao != null) return estadisticaDao;
+		
+		estadisticaDao = new EstadisticaDao();
+		return estadisticaDao;
 	}
 	
 }

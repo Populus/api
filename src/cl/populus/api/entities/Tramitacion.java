@@ -1,6 +1,7 @@
 package cl.populus.api.entities;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -12,7 +13,7 @@ public class Tramitacion {
 	private String sesion;
 	private Date fecha;
 	private String etapa;
-	private Votacion votacion;
+	private List<Votacion> votaciones;
 	private String docComparado;
 	private String docInforme;
 	private String docDiscusion;
@@ -73,12 +74,6 @@ public class Tramitacion {
 	public void setNroBoletin(String nroBoletin) {
 		this.nroBoletin = nroBoletin;
 	}
-	public Votacion getVotacion() {
-		return votacion;
-	}
-	public void setVotacion(Votacion votacion) {
-		this.votacion = votacion;
-	}
 	public String getDocComparado() {
 		return docComparado;
 	}
@@ -96,6 +91,12 @@ public class Tramitacion {
 	}
 	public void setDocDiscusion(String docDiscusion) {
 		this.docDiscusion = docDiscusion;
+	}
+	public List<Votacion> getVotaciones() {
+		return votaciones;
+	}
+	public void setVotaciones(List<Votacion> votaciones) {
+		this.votaciones = votaciones;
 	}
 
 }

@@ -18,7 +18,7 @@ public class RepresentanteDao extends BaseDao {
 							"IF(d.id IS NOT NULL, d.inicio, s.inicio) AS inicio, "+
 							"IF(d.id IS NOT NULL, d.fin,s.fin) AS fin, "+
 							"IF(d.id IS NOT NULL, d.distrito,s.circunscripcion) AS area "+ 
-							"FROM populus2.politico p "+
+							"FROM politico p "+
 							"LEFT JOIN diputado d ON p.id = d.id "+
 							"LEFT JOIN senador s ON p.id = s.id "+
 							"WHERE p.id = "+id+" "+

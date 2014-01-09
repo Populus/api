@@ -19,6 +19,7 @@ public class Boletin {
 	private List<Long> refundidos;
 	private String leyModificada;	
 	private Date fechaIngreso;
+	private List<Tramitacion> tramitaciones;
 	
 	public String getNumero() {
 		return numero;
@@ -79,6 +80,12 @@ public class Boletin {
 	}
 	public void setLeyModificada(String leyModificada) {
 		this.leyModificada = leyModificada;
+	}
+	public List<Tramitacion> getTramitaciones() {
+		return tramitaciones;
+	}
+	public void setTramitaciones(List<Tramitacion> tramitaciones) {
+		this.tramitaciones = tramitaciones;
 	}
 	
 
